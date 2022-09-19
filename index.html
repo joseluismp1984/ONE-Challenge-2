@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego del Ahorcado</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="./css/tablet.css"
+      media="screen and (min-width: 576px)"
+    />
+    <link
+      rel="stylesheet"
+      href="./css/desktop.css"
+      media="screen and (min-width: 995px)"
+    />
+  </head>
+  <body>
+    <header class="encabezado" id="encabezado" name="encabezado">
+      <figure class="logo" id="logo" name="logo">
+        <img
+          src="./img/logo-alura.svg"
+          alt="Logo de Alura Latam"
+          title="logo de alura latam"
+        />
+      </figure>
+    </header>
+
+    <main class="principal" id="principal" name="principal">
+      <!-- esta es la pantalla inicial -->
+      <section
+        class="iniciar-agregar"
+        id="iniciar-agregar"
+        name="iniciar-agregar"
+      >
+        <button
+          class="iniciar"
+          id="iniciar"
+          name="iniciar"
+          type="submit"
+          onclick="escenarioUno()"
+        >
+          Iniciar Juego
+        </button>
+
+        <input
+          type="submit"
+          class="agregar"
+          id="agregar"
+          name="agregar"
+          value="Agregar Nueva Palabra"
+          onclick="escenarioCuatro()"
+        />
+      </section>
+
+      <!-- Esta es la pantalla agregar palabra -->
+      <input
+        type="text"
+        class="texto-palabra"
+        id="texto-palabra"
+        name="texto-palabra"
+        placeholder="Ingrese una palabra"
+      />
+
+      <section class="main-alert" id="main-alert" name="main-alert">
+        <figure
+          class="main-alert-icono"
+          name="main-alert-icono"
+          id="main-alert-icono"
+        >
+          <img src="./img/atencion.svg" alt="Imagen de alerta" />
+        </figure>
+
+        <span
+          class="main-alert-text"
+          name="main-alert-text"
+          id="main-alert-text"
+          >Máx. de 8 letras</span
+        >
+      </section>
+
+      <section
+        class="guardar-cancelar"
+        id="guardar-cancelar"
+        name="guardar-cancelar"
+      >
+        <button
+          class="guardar"
+          id="guardar"
+          name="guardar"
+          onclick="escenarioSeis()"
+        >
+          Guardar Y Empezar
+        </button>
+
+        <button
+          class="cancelar"
+          id="cancelar"
+          name="cancelar"
+          type="submit"
+          onclick="escenarioCinco()"
+        >
+          Cancelar
+        </button>
+      </section>
+
+      <!-- Esta es la vista del juego -->
+
+      <input
+        type="text"
+        class="teclado-mobil"
+        id="teclado-mobil"
+        name="teclado-mobil"
+        autofocus
+      />
+
+      <canvas
+        class="canva-juego"
+        id="canva"
+        name="canva"
+        width="300"
+        height="350"
+      ></canvas>
+
+      <div class="secreto-juego" id="secreto-juego" name="secreto-juego">
+        <div class="caja" id="caja1"></div>
+        <div class="caja" id="caja2"></div>
+        <div class="caja" id="caja3"></div>
+        <div class="caja" id="caja4"></div>
+        <div class="caja" id="caja5"></div>
+        <div class="caja" id="caja6"></div>
+        <div class="caja" id="caja7"></div>
+        <div class="caja" id="caja8"></div>
+        <div class="caja" id="caja9"></div>
+        <div class="caja" id="caja10"></div>
+        <div class="caja" id="caja11"></div>
+        <div class="caja" id="caja12"></div>
+        <div class="caja" id="caja13"></div>
+      </div>
+
+      <div class="error-juego" id="error-juego" name="error-juego">
+        <div class="error" id="error1"></div>
+        <div class="error" id="error2"></div>
+        <div class="error" id="error3"></div>
+        <div class="error" id="error4"></div>
+        <div class="error" id="error5"></div>
+        <div class="error" id="error6"></div>
+        <div class="error" id="error7"></div>
+        <div class="error" id="error8"></div>
+        <div class="error" id="error9"></div>
+      </div>
+
+      <section
+        class="nuevo-desistir-juego"
+        id="nuevo-desistir-juego"
+        name="nuevo-desistir-juego"
+      >
+        <button
+          class="nuevo-juego"
+          id="nuevo-juego"
+          name="nuevo-juego"
+          type="submit"
+          onclick="escenarioTres()"
+        >
+          Nuevo Juego
+        </button>
+        <button
+          class="desistir-juego"
+          id="desistir-juego"
+          name="desistir-juego"
+          type="submit"
+          onclick="escenarioDos()"
+        >
+          Desistir
+        </button>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <p class="foot-text">Ing. José Luis Martínez</p>
+
+      <figure class="foot-logos">
+        <picture class="foot-github">
+          <a href="https://github.com/joseluismp1984" target="_blank"
+            ><img src="./img/logo-github.svg" alt="Logo GitHub con enlace"
+            title:="https://github.com/joseluismp1984" /></a
+          >
+        </picture>
+
+        <picture class="foot-linkedin">
+          <a
+            href="https://www.linkedin.com/in/jose-luis-martinez-palmeth-2686097b/"
+            target="_blank"
+            ><img src="./img/logo-linkedin.svg" alt="Logo LinkInd con enlace"
+            title:="https://www.linkedin.com/in/jose-luis-martinez-palmeth-2686097b/"></a
+          >
+        </picture>
+      </figure>
+    </footer>
+
+    <script src="./js/vistas.js"></script>
+    <script src="./js/canvas.js"></script>
+    <script src="./js/code.js"></script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+/*----------VISTA INICIAL----------*/
+.iniciar-agregar {
+  top: 24.9vh;
+  left: 39vw;
+  width: 22vw;
+  height: 21.3vh;
+  gap: 3.7vh;
+}
+.iniciar {
+  width: 22vw;
+  height: 11.1vh;
+  border-radius: 1.7vw;
+  font-size: 2rem;
+}
+.agregar {
+  width: 19.4vw;
+  height: 6.5vh;
+  border-radius: 1.7vw;
+  font-size: 2rem;
+}
+/*----------SEGUNDA VISTA-----------*/
+.texto-palabra {
+  width: 20.8vw;
+  height: 4.7vh;
+  left: 26.1vw;
+  top: 10.6vh;
+  font-size: 35px;
+}
+.main-alert {
+  width: 11vw;
+  height: 1.8vh;
+
+  top: 50.7vh;
+  left: 26.1vw;
+  gap: 0.6vw;
+}
+.main-alert-icono {
+  width: 2.1vw;
+  height: 1.6vh;
+}
+.main-alert-text {
+  font-size: 1.6rem;
+}
+.guardar-cancelar {
+  width: 47.8vw;
+  height: 6.5vh;
+  top: 54.1vh;
+  left: 26.1vw;
+  flex-direction: row;
+  gap: 1.7vw;
+}
+.guardar {
+  width: 23.1vw;
+  height: 6.5vh;
+  border-radius: 1.7vw;
+  font-size: 2.3rem;
+}
+.cancelar {
+  width: 23.1vw;
+  height: 6.5vh;
+  border-radius: 1.7vw;
+  font-size: 2.3rem;
+}
+/*----------TERCERA Y CUARTA VISTA-----------*/
+.canva-juego {
+  top: 0vh;
+  left: 39.8vw;
+  width: 20.4vw;
+  height: 35.2vh;
+}
+.secreto-juego {
+  width: 47.8vw;
+  height: 9vh;
+  left: 26.1vw;
+  top: 36vh;
+  font-size: 3.5rem;
+}
+.caja {
+  width: 5.6vw;
+  height: 7vh;
+  justify-content: center;
+  align-items: center;
+}
+.error-juego {
+  width: 70vw;
+  height: 9vh;
+  left: 15vw;
+  top: 45.5vh;
+  font-size: 3rem;
+}
+.error {
+  width: 2.1vw;
+  height: 3.5vh;
+  margin-right: 20px;
+}
+
+.nuevo-desistir-juego {
+  width: 47.8vw;
+  height: 6.5vh;
+  top: 72.1vh;
+  left: 26.1vw;
+  gap: 1.7vw;
+}
+
+.nuevo-juego {
+  width: 23.1vw;
+  height: 6.5vh;
+  border-radius: 1.7vw;
+  font-size: 2.3rem;
+}
+
+.desistir-juego {
+  width: 23.1vw;
+  height: 6.5vh;
+  border-radius: 1.7vw;
+  font-size: 2.3rem;
+}

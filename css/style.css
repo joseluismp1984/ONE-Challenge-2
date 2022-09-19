@@ -1,0 +1,388 @@
+/*##########################################*/
+/*#########   ESTILOS GENERALES   ##########*/
+/*##########################################*/
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-size: 1.6rem;
+  max-width: 100%;
+  background-color: #f3f5fc;
+}
+/*##########################################*/
+/*#########  ESTILOS DEL HEADER   ##########*/
+/*##########################################*/
+.encabezado {
+  position: absolute;
+  width: 100vw;
+  height: 14.4vh;
+  top: 0;
+  left: 0;
+  background-color: #f3f5fc;
+  max-width: 100%;
+}
+
+.logo {
+  position: absolute;
+  width: 8.5vw;
+  height: 7.2vh;
+  top: 3.6vh;
+  left: 4.3vw;
+}
+/*##########################################*/
+/*##########  ESTILOS DEL MAIN   ###########*/
+/*##########################################*/
+
+/*-----------------------------------------------*/
+/*---------- primera  y segunda vista ----------*/
+/*-----------------------------------------------*/
+.principal {
+  position: absolute;
+  width: 100vw;
+  height: 85.6vh;
+  top: 14.4vh;
+  left: 0;
+  background-color: #f3f5fc;
+  max-width: 100%;
+}
+
+/***********************************************/
+.iniciar-agregar {
+  position: absolute;
+  top: 27.7vh;
+  left: 7.7vw;
+  width: 84.5vw;
+  height: 30vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4vh;
+}
+
+.iniciar {
+  width: 84.5vw;
+  height: 15.7vh;
+  background-color: #0a3871;
+  border: 0.1rem solid #0a3871;
+  border-radius: 6.4vw;
+  color: #ffffff;
+
+  font-family: Inter;
+  font-style: regular;
+  font-size: 2rem;
+  line-height: 100%;
+}
+
+.agregar {
+  width: 74.1vw;
+  height: 10vh;
+  background-color: transparent;
+  border: 0.1rem solid #0a3871;
+  border-radius: 6.4vw;
+  color: #0a3871;
+
+  font-family: Inter;
+  font-style: regular;
+  font-size: 2rem;
+  line-height: 100%;
+}
+/***********************************************/
+.texto-palabra {
+  position: absolute;
+  width: 91.5vw;
+  height: 7.2vh;
+  left: 4.3vw;
+  top: 8.4vh;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+
+  color: #0a3871;
+  background-color: transparent;
+  border: none;
+  display: none;
+}
+
+.texto-palabra::placeholder {
+  color: #0a3871;
+}
+/***********************************************/
+.main-alert {
+  position: absolute;
+  width: 30.7vw;
+  height: 2.7vh;
+  top: 53.2vh;
+  left: 4.3vw;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2.1vw;
+  display: none;
+}
+
+.main-alert-icono {
+  width: 4.3vw;
+  height: 2.1vh;
+}
+
+.main-alert-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 150%;
+  color: #495057;
+}
+/***********************************************/
+.guardar-cancelar {
+  position: absolute;
+  width: 91.5vw;
+  height: 23.7vh;
+  top: 58.3vh;
+  left: 4.3vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6.4vw;
+  display: none;
+}
+
+.guardar {
+  width: 91.5vw;
+  height: 10vh;
+  border: 0.1rem solid #0a3871;
+  border-radius: 6.4vw;
+  background-color: #0a3871;
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+.cancelar {
+  width: 91.5vw;
+  height: 10vh;
+  border: 0.1rem solid #0a3871;
+  border-radius: 6.4vw;
+  background-color: transparent;
+  color: #0a3871;
+  font-size: 2rem;
+}
+
+/*##########################################*/
+/*#########   ESTILOS DEL FOOTER   #########*/
+/*##########################################*/
+.foot {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 7vh;
+  top: 100vh;
+  left: 0;
+  padding-left: 4.3vw;
+  padding-right: 10vw;
+  background-color: #f3f5fc;
+  background-color: lightslategrey;
+  max-width: 100%;
+}
+
+.foot-text {
+  color: #495057;
+  color: black;
+  font-family: "Inter";
+  font-size: 1.8rem;
+  font-weight: bolder;
+}
+
+/*-----------------------------------------------*/
+/*----------- tercer  y cuarta vista -----------*/
+/*------------------- JUEGO --------------------*/
+/*----------------------------------------------*/
+
+.body-juego {
+  height: 131vh;
+  max-width: 100%;
+}
+
+.principal-juego {
+  height: 116.6vh;
+  max-width: 100%;
+}
+
+.teclado-mobil {
+  border: none;
+  background-color: transparent;
+  display: none;
+}
+
+.canva-juego {
+  position: absolute;
+  top: 6vh;
+  left: 11.9vw;
+  display: none;
+  background-color: transparent;
+}
+
+.secreto-juego {
+  position: absolute;
+  width: 85vw;
+  height: 8.4vh;
+  left: 9.6vw;
+  top: 64.7vh;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  color: #0a3871;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 150%;
+
+  display: none;
+}
+
+.caja {
+  width: 20px;
+  height: 30px;
+  background-color: transparent;
+  border-bottom: 2px solid black;
+  text-align: center;
+  margin-right: 5px;
+  /* padding-bottom: 10px; */
+  color: transparent;
+  text-align: center;
+  display: none;
+}
+
+.error-juego {
+  position: absolute;
+  width: 85vw;
+  height: 8.4vh;
+  left: 9.6vw;
+  top: 74vh;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 150%;
+
+  color: #495057;
+
+  display: none;
+}
+
+.error {
+  width: 20px;
+  height: 30px;
+  background-color: transparent;
+  text-align: center;
+  margin-right: 5px;
+  padding-bottom: 10px;
+  color: #495057;
+  display: none;
+}
+
+.nuevo-desistir-juego {
+  position: absolute;
+  width: 91.5vw;
+  height: 23.7vh;
+  top: 90.5vh;
+  left: 4.3vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6.4vw;
+  display: none;
+}
+
+.nuevo-juego {
+  width: 91.5vw;
+  height: 10.1vh;
+  border-radius: 6.4vw;
+  border: 0.1rem solid #0a3871;
+
+  gap: 2.1vw;
+  background-color: #0a3871;
+  color: #ffffff;
+  font-size: 2rem;
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.desistir-juego {
+  width: 91.5vw;
+  height: 10.1vh;
+  border-radius: 6.4vw;
+  border: 0.1rem solid #0a3871;
+
+  gap: 2.1vw;
+  background-color: transparent;
+  color: #0a3871;
+  font-size: 2rem;
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.foot-juego {
+  top: 131vh;
+  max-width: 100%;
+}
+
+/*##########################################*/
+/*##########   ESTILOS UNIVERSAL   #########*/
+/*##########################################*/
+.no-mostrar {
+  display: none;
+}
+
+.mostrar-block {
+  display: block;
+}
+
+.mostrar-flex {
+  display: flex;
+}
+
+.mostrar-letras-cajas {
+  color: #0a3871;
+}
+.mostrar-letras-error {
+  color: #495057;
+}
