@@ -8,6 +8,7 @@ let adivinadas = 0;
 let letrasAdivinadas = [];
 let letrasFallidas = [];
 let irJuego = false;
+const entrada = document.querySelector("#teclado-mobil");
 let palabras = [
   "ABUHADO",
   "ACECINAR",
@@ -113,10 +114,11 @@ function asignarSecretos() {
 }
 
 function teclaUsuario(evento) {
+  entrada.focus();
   let tecla;
   let letraUsuario;
 
-  tecla = evento.key;
+  tecla = evento.data;
   tecla = tecla.toUpperCase();
 
   if (tecla.length > 1) {
@@ -129,6 +131,8 @@ function teclaUsuario(evento) {
       alert("Digite una letra");
     }
   }
+
+  entrada.value = "";
 }
 
 function juego(x) {
@@ -173,12 +177,12 @@ function juego(x) {
   }
 
   if (intentosFallidos == 9) {
-    document.removeEventListener("keydown", teclaUsuario);
+    entrada.removeEventListener("input", teclaUsuario);
     alert("¡ HAS PERDIDO ! ");
   }
 
   if (adivinadas == letrasSecreto.length) {
-    document.removeEventListener("keydown", teclaUsuario);
+    entrada.removeEventListener("input", teclaUsuario);
     alert("¡ HAS GANADO ! ");
   }
 }
@@ -190,7 +194,8 @@ function escenarioUno() {
   seleccionarPalabra();
   separarSecreto();
   asignarSecretos();
-  document.addEventListener("keydown", teclaUsuario);
+  entrada.addEventListener("input", teclaUsuario);
+  setTimeout(document.querySelector("#teclado-mobil").focus(), "250");
 }
 /*-----------------------------------------------------------------------*/
 /*CUANDO DAMOS CLICK EN BOTON DESISTIR PARA SALIR AL INICIO*/
@@ -203,7 +208,7 @@ function limpiarVariables() {
   letrasFallidas = [];
 }
 function escenarioDos() {
-  document.removeEventListener("keydown", teclaUsuario);
+  entrada.removeEventListener("input", teclaUsuario);
   ocultarCajasErrores();
   limpiarVariables();
   ocultarHorca();
@@ -213,7 +218,7 @@ function escenarioDos() {
 /*----------------------------------------------------------------------------*/
 /*CUANDO DAMOS CLICK EN BOTON NUEVO JUEGO PARA EMPEZAR OTRA PARTIDA*/
 function escenarioTres() {
-  document.removeEventListener("keydown", teclaUsuario);
+  entrada.removeEventListener("input", teclaUsuario);
   ocultarCajasErrores();
   limpiarVariables();
   ocultarHorca();
@@ -222,7 +227,8 @@ function escenarioTres() {
   seleccionarPalabra();
   separarSecreto();
   asignarSecretos();
-  document.addEventListener("keydown", teclaUsuario);
+  entrada.addEventListener("input", teclaUsuario);
+  setTimeout(document.querySelector("#teclado-mobil").focus(), "250");
 }
 /*------------------------------------------------------------------------------*/
 /*CUANDO DAMOS CLICK EN BOTON AGREGAR NUEVA PALABRA*/
@@ -244,7 +250,7 @@ function agregarPalabra() {
   if (document.querySelector("#texto-palabra").value == "") {
     alert("¡No Ha Ingresado Palabra!");
   } else {
-    valido = /[^A-Z\s]/.test(document.querySelector("#texto-palabra").value);
+    valido = /[^A-Z]/.test(document.querySelector("#texto-palabra").value);
 
     if (valido || document.querySelector("#texto-palabra").value.length > 8) {
       alert("¡Solo letras mayusculas y máximo 8 letras!");
@@ -266,6 +272,7 @@ function escenarioSeis() {
     mostrarHorca(intentosFallidos);
     separarSecreto();
     asignarSecretos();
-    document.addEventListener("keydown", teclaUsuario);
+    entrada.addEventListener("input", teclaUsuario);
+    setTimeout(document.querySelector("#teclado-mobil").focus(), "250");
   }
 }

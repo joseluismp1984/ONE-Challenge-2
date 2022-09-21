@@ -30,7 +30,6 @@ function mostrarAgregar() {
 }
 /*----------------------------------------------------------------------------*/
 function ocultarJuego() {
-  document.querySelector("#teclado-mobil").classList.remove("mostrar-block");
   document.querySelector("#canva").classList.remove("mostrar-block");
   document.querySelector("#secreto-juego").classList.remove("mostrar-flex");
   document.querySelector("#error-juego").classList.remove("mostrar-flex");
@@ -62,7 +61,6 @@ function ocultarCajasErrores() {
   }
 }
 function mostrarJuego() {
-  document.querySelector("#teclado-mobil").classList.add("mostrar-block");
   document.querySelector("#canva").classList.add("mostrar-block");
   document.querySelector("#secreto-juego").classList.add("mostrar-flex");
   document.querySelector("#error-juego").classList.add("mostrar-flex");

@@ -230,9 +230,14 @@ body {
 }
 
 .teclado-mobil {
+  position: absolute;
+  left: 30vw;
+  top: 1vh;
+  width: 500px;
+  height: 50px;
   border: none;
   background-color: transparent;
-  display: none;
+  opacity: 0;
 }
 
 .canva-juego {
